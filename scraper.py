@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from urllib2 import urlopen 
+from datetime import date
 import csv
 
 categories = {
@@ -9,7 +10,9 @@ categories = {
 	'scoring-per-game' : 'PTS',
 	'steals' : 'STPG'
 }
-years = [2015, 2016]
+years = [date.today().year - 1, date.today().year]
+years = [str(year) for year in years]
+print years
 
 def get_tables():
 	for category in categories.keys():

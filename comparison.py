@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np 
+from datetime import date
 
 categories = {
 	'assists' : 'APG',
@@ -8,7 +9,8 @@ categories = {
 	'scoring-per-game' : 'PTS',
 	'steals' : 'STPG'
 }
-years = [2015, 2016]
+years = [date.today().year - 1, date.today().year]
+years = [str(year) for year in years]
 
 def compare():
 	overall = True
